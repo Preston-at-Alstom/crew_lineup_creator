@@ -1,6 +1,0 @@
-streamlit
-pandas
-pypdf
-datetime
-PyPDF2
-dataclasses
