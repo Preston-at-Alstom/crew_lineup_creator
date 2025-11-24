@@ -1,4 +1,4 @@
-import pypdf
+import PyPDF2
 import pandas as pd
 import datetime as dt
 from dataclasses import dataclass
@@ -71,7 +71,7 @@ def to_df(operating_day, special_package):
     
     
     # creating a pdf reader object
-    reader = pypdf.PdfReader(selected_job_package)
+    reader = PyPDF2.PdfReader(selected_job_package)
 
     # Find the number of pages
     number_of_pages = len(reader.pages)
