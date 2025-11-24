@@ -1,4 +1,4 @@
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 import pandas as pd
 import datetime as dt
 from dataclasses import dataclass
