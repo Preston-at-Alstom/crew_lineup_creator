@@ -45,6 +45,7 @@ def create_lineup(lineup_object, special_package):
     driver_lineup = source_df[source_df['Tour #'].isin(drivers_jobs)] 
     upe_lineup    = source_df[source_df['Tour #'].isin(upe_jobs)    ] 
     
+    
     job_info, _   = job_descriptions.to_df(day_of_week, special_package)
     job_numbers   = job_info['job_number'].tolist()
     on_duty_times = job_info['on_duty'].tolist()
@@ -57,7 +58,7 @@ def create_lineup(lineup_object, special_package):
 
     compiled_lineup = pd.concat([go_lineup, extra_lineup, extra_lineup_2, driver_lineup, upe_lineup], ignore_index=True)
         
-    compiled_lineup.to_excel(filename, index = False, engine='openpyxl')
+    compiled_lineup.to_excel('temp.xlsx', index = False, engine='openpyxl')
     
     return filename, job_info_list, formated_date
 

@@ -20,10 +20,10 @@ if lineup_upload is not None:
  
    filename, job_info_list, formated_date = backend.create_lineup(lineup_upload, special_package)
 
-   format_report.format(filename, job_info_list, formated_date)
+   format_report.format('temp.xlsx', job_info_list, formated_date)
 
 
-   with open(filename, 'rb') as file:
+   with open('temp.xlsx', 'rb') as file:
         st.download_button(label = 'Download Line-up',
                     data = file, 
                     file_name = filename, 
