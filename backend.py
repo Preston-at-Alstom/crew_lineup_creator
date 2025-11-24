@@ -26,9 +26,9 @@ def create_lineup(lineup_object, special_package):
     
 
     # Exclusion lists
-    go_jobs         = range(100000, 499999)
+    go_jobs         = range(100000, 399999)
     extra_jobs      = range(4000  , 4999 )
-    extra_jobs_2    = range(40000 , 49999 )
+    extra_jobs_2    = range(400000 , 499999 )
     drivers_jobs    = range(9000  , 9899  )
     upe_jobs        = range(500000, 599999)
     #crew_dispatcher= range(9900, 9999)

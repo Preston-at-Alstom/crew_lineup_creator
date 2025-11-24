@@ -15,7 +15,7 @@ def format(file, job_times, formated_date):
     sheet.sheet_view.showGridLines = False
     sheet.page_setup.paperSize   = sheet.PAPERSIZE_LEGAL
     sheet.page_setup.orientation = sheet.ORIENTATION_LANDSCAPE
-    sheet.page_margins           = PageMargins(left=0.6, right=0.6, top=1.9, bottom=1.9, header=0.5, footer=0.8)
+    
 
     # Set the text for the center of the odd page header
     sheet.oddHeader.center.text  = 'GO and UP Crew Lineup'
@@ -130,7 +130,8 @@ def format(file, job_times, formated_date):
         if int(Tour_number) >= 50000 and CSA_cell.value is None:
             CSA_cell.fill = light_blue_fill
 
-
+    sheet.page_margins           = PageMargins(left=0.6, right=0.6, top=1.9, bottom=0.9, header=0.5, footer=0.8)
+    
    # Save the modified workbook
     workbook.save(file)     
 
