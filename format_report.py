@@ -130,8 +130,10 @@ def format(file, job_times, formated_date):
         if int(Tour_number) >= 50000 and CSA_cell.value is None:
             CSA_cell.fill = light_blue_fill
 
+    sheet.cell[f'N{row_count}] = ':)'
     sheet.page_margins           = PageMargins(left=0.6, right=0.6, top=1.9, bottom=0.9, header=0.5, footer=0.8)
     
    # Save the modified workbook
     workbook.save(file)     
+
 
