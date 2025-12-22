@@ -7,8 +7,8 @@ from dataclasses import dataclass
 # Selects the weekday or weekend package
 def package_selector(day_of_Week):
 
-    weekday_package = 'TO-ON-25-227 - Job Descriptions  WeekDAYs  eff November 23 2025.pdf'
-    weekend_package = 'TO-ON-25-227 - Job Descriptions  WeekENDs  eff November 23 2025.pdf'
+    weekday_package = 'TO-ON-25-260 - Job Descriptions  WeekDAYs  eff December 21 2025.pdf'
+    weekend_package = 'TO-ON-25-260 - Job Descriptions  WeekENDs  eff December 21 2025.pdf'
 
     weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
     
@@ -176,4 +176,5 @@ def to_df(operating_day, special_package):
     
 
     return pd.DataFrame([job.__dict__ for job in Job_Descriptions]),  pd.DataFrame([trip.__dict__ for trip in Job_Trips])
+
 
